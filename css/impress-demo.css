@@ -61,15 +61,17 @@ table {
 
 body {
     font-family: 'PT Sans', sans-serif;
+
+    color: #f2f2f3;
     
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: rgb(99, 66, 120);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(99, 66, 120)), to(rgb(99, 30, 120)));
+    background: -webkit-radial-gradient(rgb(99, 66, 120), rgb(99, 30, 120));
+    background:    -moz-radial-gradient(rgb(99, 66, 120), rgb(99, 30, 120));
+    background:      -o-radial-gradient(rgb(99, 66, 120), rgb(99, 30, 120));
+    background:         radial-gradient(rgb(99, 66, 120), rgb(99, 30, 120));
 
     -webkit-font-smoothing: antialiased;
 }
@@ -78,7 +80,7 @@ b, strong { font-weight: bold }
 i, em { font-style: italic}
 
 a {
-    color: inherit;
+    color: #555;
     text-decoration: none;
     padding: 0 0.1em;
     background: rgba(255,255,255,0.5);
@@ -130,8 +132,61 @@ body     { pointer-events: none; }
 }
 
 .step:not(.active) {
-    opacity: 0.3;
+    opacity: 0.05;
 }
+
+
+
+.big {
+    font-size: 90px;
+    line-height: 150px;
+}
+
+
+.translate {
+    -webkit-transform: translateY(-10px);
+    -moz-transform:    translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    -o-transform:      translateY(-10px);
+    transform:         translateY(-10px);
+
+    -webkit-transition-delay: 1.5s;
+    -moz-transition-delay:    1.5s;
+    -ms-transition-delay:     1.5s;
+    -o-transition-delay:      1.5s;
+    transition-delay:         1.5s;
+}
+
+.rotate {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+
+    -webkit-transition-delay: 1.75s;
+    -moz-transition-delay:    1.75s;
+    -ms-transition-delay:     1.75s;
+    -o-transition-delay:      1.75s;
+    transition-delay:         1.75s;
+}
+
+.scale {
+    -webkit-transform: scale(0.7);
+    -moz-transform:    scale(0.7);
+    -ms-transform:     scale(0.7);
+    -o-transform:      scale(0.7);
+    transform:         scale(0.7);
+
+    -webkit-transition-delay: 2s;
+    -moz-transition-delay:    2s;
+    -ms-transition-delay:     2s;
+    -o-transition-delay:      2s;
+    transition-delay:         2s;
+
+}
+
+
 
 /* STEP SPECIFIC STYLES */
 
@@ -214,99 +269,6 @@ body     { pointer-events: none; }
 
 #title .footnote {
     font-size: 32px;
-}
-
-/* big thoughts */
-
-#big {
-    width: 600px;
-    text-align: center;
-    font-size: 60px;
-    line-height: 1;
-}
-
-#big b {
-    display: block;
-    font-size: 250px;
-    line-height: 250px;
-}
-
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
-}
-
-/* tiny ideas */
-
-#tiny {
-    width: 500px;
-    text-align: center;
-}
-
-#ing {
-    width: 500px;
-}
-
-#ing b {
-    display: inline-block;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
-}
-
-#ing.active .positioning {
-    -webkit-transform: translateY(-10px);
-    -moz-transform:    translateY(-10px);
-    -ms-transform:     translateY(-10px);
-    -o-transform:      translateY(-10px);
-    transform:         translateY(-10px);
-
-    -webkit-transition-delay: 1.5s;
-    -moz-transition-delay:    1.5s;
-    -ms-transition-delay:     1.5s;
-    -o-transition-delay:      1.5s;
-    transition-delay:         1.5s;
-}
-
-#ing.active .rotating {
-    -webkit-transform: rotate(-10deg);
-    -moz-transform:    rotate(-10deg);
-    -ms-transform:     rotate(-10deg);
-    -o-transform:      rotate(-10deg);
-    transform:         rotate(-10deg);
-
-    -webkit-transition-delay: 1.75s;
-    -moz-transition-delay:    1.75s;
-    -ms-transition-delay:     1.75s;
-    -o-transition-delay:      1.75s;
-    transition-delay:         1.75s;
-}
-
-#ing.active .scaling {
-    -webkit-transform: scale(0.7);
-    -moz-transform:    scale(0.7);
-    -ms-transform:     scale(0.7);
-    -o-transform:      scale(0.7);
-    transform:         scale(0.7);
-
-    -webkit-transition-delay: 2s;
-    -moz-transition-delay:    2s;
-    -ms-transition-delay:     2s;
-    -o-transition-delay:      2s;
-    transition-delay:         2s;
-
-}
-
-/* imagination */
-
-#imagination {
-    width: 600px;
-}
-
-#imagination .imagination {
-    font-size: 78px;
 }
 
 /* use the source, Luke */
